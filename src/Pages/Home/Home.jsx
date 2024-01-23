@@ -72,16 +72,16 @@ const Home = () => {
    
 
     return (
-        <div className='container mx-auto  w-full flex '>
-            <div className='w-1/5 bg-slate-300 h-screen'>
+        <div className='container mx-auto  w-full flex flex-col md:flex-row  '>
+            <div className='md:w-1/5 w-full bg-slate-300 md:h-screen'>
                 <h1 className='px-4 py-4 text-success text-center text-3xl'>Menu.</h1>
-                <ul className=' py-3 px-8 text-xl text-red-800 '>
+                <ul className=' py-3 px-8 text-xl  text-red-800 flex md:flex-col flex-row justify-between'>
                     <li className={` ${isTab == "timeline" ? "border-green-500 text-red-500" : "" }  py-2  border-b-2 `} onClick={()=>ActiveTab("timeline")}>Your TimeLine</li>
                     <li className={` ${isTab == "task" ? "border-green-500 text-red-500" : "" }  py-2  border-b-2 `} onClick={()=>ActiveTab("task")}>Create Task</li>
                     <li className={` ${isTab == "profile" ? "border-green-500 text-red-500" : "" }  py-2  border-b-2 `} onClick={()=>ActiveTab("profile")}>Profile</li>
                 </ul>
             </div>
-            <div className='w-3/5'>
+            <div className='md:w-3/5 w-full'>
                 { isTab =="profile" ? <div>
                     <h2>Profile.....</h2>
                 </div> : isTab == "timeline" ? <div>
@@ -127,12 +127,9 @@ const Home = () => {
             </div>
 
             <button onClick={handleTasksubmit} className="mt-4 bg-blue-500 text-white py-2 px-4 rounded-lg">
-                Submit
+                Post
             </button>
-
-
-            <button onClick={handleGetDtata} className='btn btn-primary'>Get Data</button>
-            <button  className='btn btn-success mt-6' >Get USERS</button>
+            
                </div>}
                
             </div>

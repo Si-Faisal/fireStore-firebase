@@ -132,7 +132,7 @@ const Timeline = () => {
         <div>
             {taskFromDB?<>
                {taskFromDB.map(post =>  <div key={post.id} className='w-full p-3  my-2'>
-                <div className='flex flex-col border p-3'>
+                <div className='w-full flex flex-col border p-3'>
                 <div className='flex mb-3 justify-between '>
                   <h2 className='text-3xl text-red-950 pr-2'>{post.data.Title}</h2>
                  <div className='flex gap-2 pl'>
